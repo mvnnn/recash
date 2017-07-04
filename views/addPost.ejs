@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Add Post</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    .btn - file {
+        position: relative;
+        overflow: hidden;
+      }
+      .btn - file input[type = file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min - width: 100 % ;
+        min - height: 100 % ;
+        font - size: 100 px;
+        text - align: right;
+        filter: alpha(opacity = 0);
+        opacity: 0;
+        outline: none;
+        background: white;
+        cursor: inherit;
+        display: block;
+      }
+
+    #
+    img - upload {
+      width: 100 % ;
+    }
+  </script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Add Post</h2>
+    <p>The form below contains two input elements; one of type text and one of type password:</p>
+    <form id="uploadform" method="post" action="http://localhost:8080/addpost" encType="multipart/form-data">
+      <div class="form-group">
+        <label for="usr">Info:</label>
+        <input type="text" class="form-control" id="usr" name="information">
+      </div>
+
+      <div class="container">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>Upload Image</label>
+            <div class="input-group">
+              <span class="input-group-btn">
+                    <span class="btn btn-default btn-file">
+                        Browse… <input type="file" name="userFile" id="imgInp">
+                    </span>
+              </span>
+            </div>
+            <img id='img-upload' />
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success navbar-btn">Add Post</button>
+    </form>
+  </div>
+
+</body>
+
+</html>
